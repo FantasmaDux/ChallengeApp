@@ -24,4 +24,11 @@ public class ChallengeService {
       return true;
     } else return false;
   }
+
+  public Challenge getChallenge(String month) {
+    for (Challenge challenge : challenges) {
+      if (challenge.getMonth().equalsIgnoreCase(month)) return challenge;
+    }
+    return null;
+  }
 }
